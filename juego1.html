@@ -6,19 +6,44 @@
 <title>Top 10 Mejores Juegos de Terror</title>
 
 <style>
-    body {
-        margin: 0;
+	
+	body {
+        background: #000;
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  position: relative;
+  overflow-x: hidden;
+	
         padding: 20px;
         font-family: Arial, sans-serif;
-        background: #111;
-        color: #eee;
+        
+        
         line-height: 1.7;
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
-        overflow-x: hidden;
+       
+	
     }
 
+   body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 2px, transparent 2px, transparent 4px);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+  animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(8px); }
+}
+   
+   
     h1 {
         text-align: center;
         margin-bottom: 20px;
@@ -53,6 +78,7 @@
 <body>
 
 <h1>👻🔥 TOP 10 MEJORES JUEGOS DE TERROR 😱💀</h1>
+
 
 <p style="text-align:center;">
 Si te gusta pasar miedo, transpirar frío y escuchar pasos que no existen, esta lista es para vos 😬👻.
@@ -130,6 +156,11 @@ Si te gusta pasar miedo, transpirar frío y escuchar pasos que no existen, esta 
 
 
 <a href="index.html" class="volver">⬅️ Volver al inicio</a>
+
+
+
+
+
 
 </body>
 </html>

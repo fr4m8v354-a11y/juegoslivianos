@@ -10,6 +10,7 @@
     gap: 5px;
 }
 
+
 .item img {
     max-width: 100%;
     max-height: 120px; /* Ajusta según necesidad */
@@ -35,6 +36,7 @@
     height: 100%;
     object-fit: cover; 
     border-radius: 8px;
+    
 }
 
 
@@ -68,3 +70,54 @@ Solución: */
     max-width: 100%;
     height: auto;
 }
+
+/* ==================== PROTECCIÓN QR (agregar al final) ==================== */
+.side {
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  padding: 15px;
+  border: 6px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  display: inline-block;
+  margin: 20px;
+}
+
+.side img {
+  display: block;
+  width: 220px;          /* o el tamaño que quieras */
+  height: auto;
+  image-rendering: crisp-edges;
+  filter: none !important;
+}
+
+/* Texto opcional debajo del QR (borrá si no lo querés) */
+.side::after {
+  content: "ESCANEA SI TE ATREVÉS";
+  display: block;
+  margin-top: 10px;
+  font-family: 'VT323', monospace;
+  font-size: 14px;
+  color: #f00;
+  text-align: center;
+  text-shadow: 0 0 10px #f00;
+}
+
+h1 {
+  background: linear-gradient(transparent 60%, #800 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: bleed 8s infinite linear;
+}
+h1 {
+  background: linear-gradient(transparent 60%, #800 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: bleed 8s infinite linear;
+}
+
+
+.vhs-border::before { content:"REC ●"; color:red; position:fixed; top:20px; left:20px; animation:blink 2s infinite; }
